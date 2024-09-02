@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Interativo de Filmes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo Interativo de Filmes</h1>
+        <div id="intro" class="section">
+            <p></p>
+            <button onclick="navigate('infinity-war-intro')">Vingadores: Guerra Infinita</button>
+            <button onclick="navigate('lotr-intro')">O Senhor dos Anéis: A Sociedade do Anel</button>
+            <button onclick="navigate('hp-intro')">Harry Potter e a Pedra Filosofal</button>
+        </div>
+
+        <!-- Vingadores: Guerra Infinita -->
+        <div id="infinity-war-intro" class="section hidden">
+            <h2>Vingadores: Guerra Infinita (2018)</h2>
+            <p>Thanos, um dos vilões mais poderosos do universo, busca reunir as Joias do Infinito para realizar seu plano mortal de eliminar metade de toda a vida.</p>
+            <button onclick="showEvent('event1')">Reunir os Vingadores</button>
+            <button onclick="showEvent('event2')">Enfrentar Thanos</button>
+            <button onclick="navigate('intro')">Voltar</button>
+        </div>
+
+        <!-- O Senhor dos Anéis: A Sociedade do Anel -->
+        <div id="lotr-intro" class="section hidden">
+            <h2>O Senhor dos Anéis: A Sociedade do Anel (2001)</h2>
+            <p>Frodo Bolseiro e seus companheiros iniciam uma jornada épica para destruir o Um Anel e salvar a Terra Média das forças do mal de Sauron.</p>
+            <button onclick="showEvent('event3')">Formar a Sociedade</button>
+            <button onclick="showEvent('event4')">Caminho para Mordor</button>
+            <button onclick="navigate('intro')">Voltar</button>
+        </div>
+
+        <!-- Harry Potter e a Pedra Filosofal -->
+        <div id="hp-intro" class="section hidden">
+            <h2>Harry Potter e a Pedra Filosofal (2001)</h2>
+            <p>Harry Potter descobre que é um bruxo e começa sua jornada no mundo mágico de Hogwarts, onde enfrenta desafios e descobre a verdade sobre seu passado.</p>
+            <button onclick="showEvent('event5')">Descobrir Hogwarts</button>
+            <button onclick="showEvent('event6')">Confrontar Voldemort</button>
+            <button onclick="navigate('intro')">Voltar</button>
+        </div>
+
+        <!-- Eventos para Vingadores: Guerra Infinita -->
+        <div id="event1" class="section hidden">
+            <h3>Reunindo os Vingadores</h3>
+            <p>Os Vingadores se reúnem para tentar impedir que Thanos reúna todas as Joias do Infinito. A batalha pelo destino do universo começa.</p>
+            <button onclick="navigate('infinity-war-intro')">Voltar</button>
+        </div>
+        <div id="event2" class="section hidden">
+            <h3>Enfrentando Thanos</h3>
+            <p>Os Vingadores enfrentam Thanos em uma batalha épica, mas descobrem que ele é mais poderoso do que jamais imaginaram.</p>
+            <button onclick="navigate('infinity-war-intro')">Voltar</button>
+        </div>
+
+        <!-- Eventos para O Senhor dos Anéis: A Sociedade do Anel -->
+        <div id="event3" class="section hidden">
+            <h3>Formando a Sociedade</h3>
+            <p>Frodo e seus amigos formam a Sociedade do Anel, composta por guerreiros e magos, para proteger o Anel e destruí-lo em Mordor.</p>
+            <button onclick="navigate('lotr-intro')">Voltar</button>
+        </div>
+        <div id="event4" class="section hidden">
+            <h3>Caminho para Mordor</h3>
+            <p>A Sociedade enfrenta perigos inimagináveis em sua jornada para Mordor, onde o Anel deve ser destruído.</p>
+            <button onclick="navigate('lotr-intro')">Voltar</button>
+        </div>
+
+        <!-- Eventos para Harry Potter e a Pedra Filosofal -->
+        <div id="event5" class="section hidden">
+            <h3>Descobrindo Hogwarts</h3>
+            <p>Harry explora Hogwarts, a escola de magia, onde faz novos amigos e descobre os segredos do castelo.</p>
+            <button onclick="navigate('hp-intro')">Voltar</button>
+        </div>
+        <div id="event6" class="section hidden">
+            <h3>Confrontando Voldemort</h3>
+            <p>Harry enfrenta Voldemort pela primeira vez e descobre que o poder do amor é sua maior arma contra o mal.</p>
+            <button onclick="navigate('hp-intro')">Voltar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
